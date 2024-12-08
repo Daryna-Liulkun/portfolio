@@ -1,0 +1,34 @@
+footer {
+    background-color: #000;
+   
+}
+
+footer.container {
+    min-height: auto;
+    margin-top: 30px;
+}
+
+footer.container .inside {
+    padding: var(--mob-padding);
+}
+
+h4 {
+    color: #fff;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center; /* Центрування іконок */
+    gap: 20px; /* Відстань між іконками */
+    margin-top: 15px; /* Відступ від заголовка */
+}
+
+footer .social-icons .icon img {
+    width: 40px; /* Розмір іконок */
+    height: 40px;
+    transition: transform 0.3s ease; /* Анімація при наведенні */
+}
+
+footer .social-icons .icon img:hover {
+    transform: scale(1.1); /* Збільшення при наведенні */
+}

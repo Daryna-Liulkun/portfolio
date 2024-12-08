@@ -1,0 +1,57 @@
+/* Стилі для галереї */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Вирівнюємо елементи по центру */
+    margin-top: 3em;
+    gap: 1.5rem; /* Відстань між елементами */
+    padding-left: 0; /* Прибираємо зайві відступи зліва */
+    padding-right: 0; /* Прибираємо зайві відступи справа */
+}
+
+/* Стилі для контейнера зображення та тексту */
+.gallery .img-box {
+    position: relative;
+    height: 300px; /* Фіксована висота */
+    width: 300px; /* Фіксована ширина */
+    text-decoration: none; /* Вимикає підкреслення для посилань */
+    color: inherit; /* Зберігає колір тексту без змін */
+    overflow: hidden; /* Для запобігання виходу вмісту за межі контейнера */
+    display: flex; /* Робимо flex-контейнером */
+    flex-direction: column; /* Розташовуємо зображення і текст по вертикалі */
+    justify-content: flex-end; /* Позиціонуємо текст внизу */
+    text-align: center; /* Вирівнюємо текст по центру */
+    margin: 0; /* Прибираємо зайві відступи */
+    border-radius: 8px 8px 0 0; /* Заокруглення для контейнера */
+}
+
+/* Стилі для зображень */
+.gallery .img-box img {
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Зображення адаптується до контейнера */
+    border-radius: inherit !important;
+    display: block;
+}
+
+/* Стилі для тексту під зображенням */
+.gallery .img-box p {
+    z-index: 2; /* Встановлюємо текст поверх зображення */
+    color: white; /* Білий текст */
+    font-size: 1rem; /* Розмір шрифта */
+    background: rgba(0, 0, 0, 0.6); /* Прозорий фон для тексту */
+    padding: 0.5em; /* Відступи всередині тексту */
+    border-radius: 0 0 8px 8px; /* Заокруглені кути */
+    margin: 0; /* Прибираємо відступи */
+    line-height: 1.4; /* Покращуємо висоту рядка для тексту */
+}
+
+/* Адаптивність */
+@media screen and (max-width: 767px) {
+    .gallery .img-box {
+        width: 50%; /* Кожен елемент займає 50% ширини на маленьких екранах */
+    }
+}
+

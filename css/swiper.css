@@ -1,0 +1,127 @@
+/* Контейнер слайдера */
+#swiper-01 .swiper-container {
+    width: 100%; /* Контейнер займає всю ширину */
+    padding: 1em 0;
+    overflow: visible; /* Для відображення усіх елементів */
+    box-sizing: border-box;
+}
+
+/* Стиль для swiper-wrapper */
+#swiper-01 .swiper-wrapper {
+    display: flex; /* Забезпечуємо горизонтальне розташування слайдів */
+    flex-wrap: nowrap; /* Відключаємо автоматичний перенос */
+    justify-content: flex-start; /* Розташовуємо слайди по лівому краю */
+    width: 1000px; /* Фіксована ширина слайду */
+    height: 130px; /* Фіксована висота слайду */
+}
+
+/* Стиль для кожного слайду */
+#swiper-01 .swiper-slide {
+    width: 90%; /* Основна ширина для великих екранів */
+    max-width: 600px;
+    height: 100px; /* Висота слайду */
+    margin: 10px auto; /* Центрування слайдів */
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-right: ;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Стиль для хедера в слайді */
+#swiper-01 .swiper-slide h {
+    position: fixed;
+    top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white; /* Білий колір для тексту заголовка */
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+/* Стилі для кнопок пагінації */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+
+    font-size: 2.5rem;
+    color: white; /* Білий колір для стрілок */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    z-index: 30;
+}
+
+/* Позиціонування кнопок пагінації */
+.swiper-button-prev {
+    left: 10px;
+
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+/* Стилі для пагінації */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 30;
+}
+
+/* Адаптивність для екранів від 1100px до 767px */
+@media screen and (max-width: 1100px) {
+    #swiper-01 .swiper-container {
+        width: 350px; /* Зменшуємо ширину слайдів на середніх екранах */
+        height: 300px; /* Зменшуємо висоту слайдів */
+        margin: 10px;
+    }
+
+    h2:before,
+    h2:after {
+    /* display: inline-block; */
+    content: '';
+    border-top: 1px solid var(--bg-color-2);
+    width: 70%;
+}
+}
+
+/* Для екранів шириною 767px і більше */
+@media screen and (max-width: 767px) {
+    #swiper-01 .swiper-container {
+        width: 90%; /* Займають 90% ширини екрану */
+        max-width: none; /* Знімаємо обмеження ширини */
+        height: 250px; /* Зменшуємо висоту */
+    }
+
+    /* Кнопки навігації стають меншими */
+    .swiper-button-prev,
+    .swiper-button-next {
+        font-size: 1.8rem;
+    }
+}
+
+/* Для дуже малих екранів (до 390px) */
+@media screen and (max-width: 390px) {
+    #swiper-01 .swiper-container {
+        width: 100%; /* Слайди займають всю ширину */
+        height: 200px; /* Зменшуємо висоту */
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        font-size: 1.6rem; /* Робимо кнопки ще меншими */
+    }
+
+    /* Пагінація менша і розташована нижче */
+    .swiper-pagination {
+        bottom: 5px;
+    }
+}
